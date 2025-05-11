@@ -22,7 +22,7 @@ public static class LogUtils
         MenuErrorPopup.CreatePopup();
 
         if (!AppendLogHook.Loaded)
-            AppendLogHook.LoadStatic(mod);
+            Logger.Load(mod);
     }
 
     /// <summary> Wraps <paramref name="text"/> like <see cref="Utils.WordwrapString"/> but with respect for newline. </summary>

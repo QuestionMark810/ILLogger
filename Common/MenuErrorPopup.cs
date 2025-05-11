@@ -4,11 +4,13 @@ using Terraria.ModLoader.UI;
 
 namespace ILLogger.Common;
 
-internal static class MenuErrorPopup
+/// <summary> Handles popups used to indicate errors as they occur. See <see cref="CreatePopup"/>. </summary>
+public static class MenuErrorPopup
 {
     private static float Opacity;
-    public static bool Loaded { get; private set; }
+    private static bool Loaded { get; set; }
 
+    /// <summary> Creates a popup. </summary>
     public static void CreatePopup()
     {
         if (!Loaded)
@@ -24,8 +26,9 @@ internal static class MenuErrorPopup
     private static void DrawMenu(ILContext il)
     {
         ILCursor c = new(il);
-        c.GotoNext(MoveType.After, x => x.MatchCall("Terraria.ModLoader.MenuLoader", "UpdateAndDrawModMenu"));
-        c.EmitDelegate(DoDraw);
+
+        if (c.TryGotoNext(MoveType.After, x => x.MatchCall("Terraria.ModLoader.MenuLoader", "UpdateAndDrawModMenu")))
+            c.EmitDelegate(DoDraw); 
     }
 
     private static void DoDraw()

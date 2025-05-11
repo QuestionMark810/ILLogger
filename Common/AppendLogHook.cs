@@ -6,7 +6,7 @@ using Terraria.UI;
 
 namespace ILLogger.Common;
 
-[Autoload(false)]
+[Autoload(false, Side = ModSide.Client)]
 internal class AppendLogHook : ILoadable
 {
 	internal static bool Loaded => Mod != null;
@@ -16,8 +16,8 @@ internal class AppendLogHook : ILoadable
 	private static Hook ModUIInitHook = null;
 	private static PropertyInfo ModNameInfo;
 
-	internal static void LoadStatic(Mod mod)
-	{
+    public void Load(Mod mod)
+    {
         Mod = mod;
 
         var type = typeof(Mod).Assembly.GetType("Terraria.ModLoader.UI.UIModItem");
@@ -42,7 +42,6 @@ internal class AppendLogHook : ILoadable
         }
     }
 
-	public void Load(Mod _) { }
 	public void Unload()
 	{
 		ModUIInitHook.Undo();
