@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILLogger", "ILLogger.csproj", "{28810212-E23F-4220-9852-0F8605ED9921}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28810212-E23F-4220-9852-0F8605ED9921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28810212-E23F-4220-9852-0F8605ED9921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28810212-E23F-4220-9852-0F8605ED9921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28810212-E23F-4220-9852-0F8605ED9921}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA70B15D-74B3-4C7F-9DD1-955BC4FE48DE}
+	EndGlobalSection
+EndGlobal
